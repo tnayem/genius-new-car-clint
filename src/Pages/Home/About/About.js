@@ -7,8 +7,8 @@ const About = () => {
         <div className="min-h-screen py-5">
             <div className="hero-content flex-col lg:flex-row">
                 <div className='w-1/2 relative'>
-                    <img src={person} className='rounded-lg shadow-2xl w-4/5 h-full'/>
-                    <img src={parts} className='rounded-lg shadow-2xl absolute right-5 top-1/2 w-3/5 border-8'/>
+                    <img src={person} alt='' className='rounded-lg shadow-2xl w-4/5 h-full'/>
+                    <img src={parts} alt='' className='rounded-lg shadow-2xl absolute right-5 top-1/2 w-3/5 border-8'/>
                 </div>
                 <div className='w-1/2'>
                     <p className=' font-bold text-orange-600'>About</p>
