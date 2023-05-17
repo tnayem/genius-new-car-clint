@@ -2,7 +2,7 @@ import React from 'react';
 import loginImage from '../../assets/images/login/login.svg'
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const LogIn = () => {
     const handleLogin = event=>{
         event.preventdefault()
     }
@@ -31,14 +31,14 @@ const Login = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <input className="btn btn-primary" type="submit" value="SignUp" />
+                            <input className="btn btn-primary" type="submit" value="LogIn" />
                         </div>
                     </form>
-                    <p className='text-center'><small>Already have an account?<Link className=' text-orange-600 font-semibold ml-1' to='/'>Login</Link></small></p>
+                    <p className='text-center'><small>Haven't account? Please<Link className=' text-orange-600 font-semibold ml-1' to='/signup'>SignUp</Link></small></p>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Login;
+export default LogIn;
