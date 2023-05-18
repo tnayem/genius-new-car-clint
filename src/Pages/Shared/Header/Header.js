@@ -5,7 +5,7 @@ import logo from '../../../assets/logo.svg';
 const Header = () => {
     const menuItem = <>
         <li className='font-semibold'><Link to='/'>Home</Link></li>
-        <li className='font-semibold'><Link to='/login'>Login</Link></li>
+        <li className='font-semibold'><Link to='/mylogin'>Login</Link></li>
         <li className='font-semibold'><Link to='/signup'>SignUp</Link></li>
 
     </>

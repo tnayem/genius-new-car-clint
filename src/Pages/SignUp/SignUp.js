@@ -11,13 +11,22 @@ const SignUp = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.pass.value;
-        console.log(email, password);
         createUser(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                if(user.uid){
+                    alert("SignUp Successfull")
+                    
+                }
             })
-            .catch(err => console.error(err))
+            .catch(err =>{
+                console.error(err)
+                if(err){
+                    alert("Already Have an Account")
+                }
+            })
+            form.reset()
     }
     return (
         <div className="hero w-full my-20">
@@ -53,7 +62,7 @@ const SignUp = () => {
                             <input className="btn btn-primary" type="submit" value="SignUp" />
                         </div>
                     </form>
-                    <p className='text-center'><small>Already have an account?<Link className=' text-orange-600 font-semibold ml-1' to='/login'>Login</Link></small></p>
+                    <p className='text-center'><small>Already have an account?<Link className=' text-orange-600 font-semibold ml-1' to='/mylogin'>Login</Link></small></p>
                 </div>
             </div>
         </div>
