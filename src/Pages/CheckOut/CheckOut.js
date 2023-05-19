@@ -24,6 +24,22 @@ const CheckOut = () => {
             message
            
         }
+        fetch('http://localhost:5000/orders',{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(order)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+            if(data.acknowledged){
+                alert('Order Placed Successfully')
+                form.reset();
+            }
+        })
+        .catch(err=>console.error(err))
     }
     
     return (
