@@ -4,11 +4,10 @@ import ServiceCard from './ServiceCard';
 const Services = () => {
     const [Services,setServices] = useState([])
     useEffect(()=>{
-        fetch('services.json')
+        fetch('http://localhost:5000/services')
         .then(res=>res.json())
         .then(data=> setServices(data))
     },[])
-    console.log(Services);
     return (
         <div>
             <div className='text-center py-5'>

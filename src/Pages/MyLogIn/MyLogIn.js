@@ -1,12 +1,11 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import loginImage from '../../assets/images/login/login.svg'
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
-import {toast } from 'react-toastify';
 
 const MyLogIn = () => {
-    const notify = () => toast("Wow so easy!");
     const { logIn } = useContext(AuthContext)
+    const navigate = useNavigate()
     const handleLogIn = event => {
         event.preventDefault()
         const form = event.target;
@@ -16,10 +15,10 @@ const MyLogIn = () => {
         logIn(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                console.log(user.email);
             })
             .catch(err => console.error(err))
-            form.reset()
+            navigate('/')
     }
     return (
         <div className="hero w-full my-20">
